@@ -3,6 +3,14 @@ import car from '../assets/car.png';
 import carTwo from '../assets/carTwo.png';
 import Swap from '../assets/Swap.png';
 import Delivery from "../components/delivery/Delivery";
+import CarBox from "../components/carBox/CarBox";
+import Gas from '../assets/GasStation.png';
+import Royce from '../assets/Rolls-Royce.png';
+import Nissan  from '../assets/nissangtr.png';
+import Manual from '../assets/Manual.png';
+import Profiluser from '../assets/user.png';
+import { HeartOutlined } from "@ant-design/icons";
+
 
 const Home = () => {
   return (
@@ -54,6 +62,67 @@ const Home = () => {
                 date="Date"
                 time="Time"
               />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5 mb-5 ">
+            <div className="flex justify-between items-center mt-9">
+              <h1 className="cursor-pointer">Popular Car</h1>
+              <button>View All</button>
+            </div>
+            <div className="flex overflow-x-auto no-scrollbar gap-5  md:justify-between">
+
+              <CarBox
+                title="Koenigsegg"
+                type="Sport"
+                price="$99.00"
+                image={car}
+                people="2 People"
+                gas="90L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+              />
+              <CarBox
+                title="Nissan GT - R"
+                type="Sport"
+                price="$80.00"
+                discount="$100.00"
+                image={Nissan}
+                people="2 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+              />
+              <CarBox
+                title="Rolls - Royce"
+                type="Sport"
+                price="$96.00"
+                image={Royce}
+                people="4 People"
+                gas="70L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+              />
+              <CarBox
+                title="Nissan GT - R"
+                type="Sport"
+                price="$80.00"
+                discount="$100.00"
+                image={Nissan}
+                people="2 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+              />
+
             </div>
           </div>
         </div>
