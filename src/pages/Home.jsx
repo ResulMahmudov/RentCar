@@ -6,9 +6,17 @@ import Delivery from "../components/delivery/Delivery";
 import CarBox from "../components/carBox/CarBox";
 import Gas from '../assets/GasStation.png';
 import Royce from '../assets/Rolls-Royce.png';
-import Nissan  from '../assets/nissangtr.png';
+import Nissan from '../assets/nissangtr.png';
 import Manual from '../assets/Manual.png';
 import Profiluser from '../assets/user.png';
+import Rush from '../assets/Rush.png';
+import Terios from '../assets/Terios.png';
+import Excite from '../assets/MGZXExcite.png';
+import Exclusice from '../assets/MGZXExclusice.png';
+import NewMgZs from '../assets/NewMGZS (3).png';
+import TwoNewMgZs from '../assets/NewMGZS.png';
+import Crv from '../assets/Crv.png';
+import CrvTwo from '../assets/CrvTwo.png';
 import { HeartOutlined } from "@ant-design/icons";
 
 
@@ -83,6 +91,10 @@ const Home = () => {
                 imageGas={Gas}
                 imagePeople={Profiluser}
                 imageManual={Manual}
+                mobileWidth="w-[300px]"
+                flex="flex-row gap-4"
+                CarFlex=" flex-col"
+                BoxImage="w-[220px] h-[64px] md:w-[264px] md:[108px]"
               />
               <CarBox
                 title="Nissan GT - R"
@@ -96,10 +108,14 @@ const Home = () => {
                 imageGas={Gas}
                 imagePeople={Profiluser}
                 imageManual={Manual}
+                mobileWidth="w-[300px]"
+                flex="flex-row w-full"
+                CarFlex=" flex-col"
+                BoxImage="w-[220px] h-[64px] md:w-[204px] md:[64px]"
               />
               <CarBox
                 title="Rolls - Royce"
-                type="Sport"
+                type="Sedan"
                 price="$96.00"
                 image={Royce}
                 people="4 People"
@@ -108,6 +124,10 @@ const Home = () => {
                 imageGas={Gas}
                 imagePeople={Profiluser}
                 imageManual={Manual}
+                mobileWidth="w-[300px]"
+                flex="flex-row w-full"
+                CarFlex=" flex-col"
+                BoxImage="w-[220px] h-[64px] md:w-[204px] md:[64px]"
               />
               <CarBox
                 title="Nissan GT - R"
@@ -121,8 +141,153 @@ const Home = () => {
                 imageGas={Gas}
                 imagePeople={Profiluser}
                 imageManual={Manual}
+                mobileWidth="w-[300px]"
+                flex="flex-row w-full"
+                CarFlex=" flex-col"
+                BoxImage="w-[220px] h-[64px] md:w-[204px] md:[64px]"
               />
 
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <h1>Recomendation Car</h1>
+            </div>
+
+            <div className="flex items-center justify-start   gap-8 flex-wrap mt-5">
+
+              <CarBox
+                title="All New Rush"
+                type="SUV"
+                price="$72.00"
+                discount="$80.00"
+                image={Rush}
+                people="6 People"
+                gas="70L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full "
+                CarFlex=" gap-[45px]  flex-row md:flex-col "
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+              <CarBox
+                title="CR-V"
+                type="SUV"
+                price="$80.00"
+                image={Crv}
+                people="6 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex=" gap-[45px] flex-row md:flex-col "
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+              <CarBox
+                title="All New Terios"
+                type="SUV"
+                price="$74.00"
+                image={Terios}
+                people="6 People"
+                gas="90L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex=" gap-[45px]  flex-row md:flex-col"
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+              <CarBox
+                title="CR - V"
+                type="SUV"
+                price="$80.00"
+                image={CrvTwo}
+                people="6 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex="gap-[45px]  flex-row md:flex-col"
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+
+              <CarBox
+                title="MG ZX Exclusice"
+                type="SUV"
+                price="$80.00"
+                image={Exclusice}
+                discount="$80.00"
+                people="6 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex=" gap-[45px]  flex-row md:flex-col"
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+              <CarBox
+                title="New MG ZS"
+                type="SUV"
+                price="$80.00"
+                image={NewMgZs}
+                people="6 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex=" gap-[45px]  flex-row md:flex-col"
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+              <CarBox
+                title="MG ZX Excite"
+                type="Hatchback"
+                price="$74.00"
+                image={Excite}
+                people="6 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex=" gap-[45px] flex-row md:flex-col "
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
+              <CarBox
+                title="New MG ZS"
+                type="SUV"
+                price="$80.00"
+                image={TwoNewMgZs}
+                people="6 People"
+                gas="80L"
+                heart={<HeartOutlined />}
+                imageGas={Gas}
+                imagePeople={Profiluser}
+                imageManual={Manual}
+                mobileWidth="w-[340px]"
+                flex="flex-col  md:flex-row gap-4 md:w-full"
+                CarFlex=" gap-[45px] flex-row md:flex-col"
+                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
+              />
             </div>
           </div>
         </div>
