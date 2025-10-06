@@ -11,7 +11,7 @@ const Home = () => {
   const selectedIds = [9, 10, 11, 12];
   const visibleCars = cars.filter(car => selectedIds.includes(car.id));
 
-  const TwoselectedIds = [1,2,3,4,5,6,7,8]; 
+  const TwoselectedIds = [1, 2, 3, 4, 5, 6, 7, 8];
   const TwovisibleCars = cars.filter(car => TwoselectedIds.includes(car.id));
   return (
     <div className="mt-8">
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5 mb-5 ">
+          <div className="flex flex-col gap-5">
             <div className="flex justify-between items-center mt-9">
               <h1 className="cursor-pointer">Popular Car</h1>
               <button>View All</button>
@@ -73,8 +73,8 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
-            <div>
+          <div className="flex flex-col items-center justify-center gap-8 mt-5 mb-5">
+            <div className="!container text-start">
               <h1>Recomendation Car</h1>
             </div>
 
@@ -83,7 +83,16 @@ const Home = () => {
               {TwovisibleCars.map(car => (
                 <CarBox key={car.id} {...car} />
               ))}
+
             </div>
+
+            <div className="w-[156px] h-[44px] bg-[#3563E9] flex items-center justify-center rounded">
+              <button className="text-white">Show more car</button>
+            </div>
+          </div>
+
+          <div>
+            
           </div>
         </div>
       </div>
