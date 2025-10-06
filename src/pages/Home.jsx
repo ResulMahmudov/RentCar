@@ -4,23 +4,15 @@ import carTwo from '../assets/carTwo.png';
 import Swap from '../assets/Swap.png';
 import Delivery from "../components/delivery/Delivery";
 import CarBox from "../components/carBox/CarBox";
-import Gas from '../assets/GasStation.png';
-import Royce from '../assets/Rolls-Royce.png';
-import Nissan from '../assets/nissangtr.png';
-import Manual from '../assets/Manual.png';
-import Profiluser from '../assets/user.png';
-import Rush from '../assets/Rush.png';
-import Terios from '../assets/Terios.png';
-import Excite from '../assets/MGZXExcite.png';
-import Exclusice from '../assets/MGZXExclusice.png';
-import NewMgZs from '../assets/NewMGZS (3).png';
-import TwoNewMgZs from '../assets/NewMGZS.png';
-import Crv from '../assets/Crv.png';
-import CrvTwo from '../assets/CrvTwo.png';
-import { HeartOutlined } from "@ant-design/icons";
+import { cars } from "../components/carBox/DataCarBox";
 
 
 const Home = () => {
+  const selectedIds = [9, 10, 11, 12];
+  const visibleCars = cars.filter(car => selectedIds.includes(car.id));
+
+  const TwoselectedIds = [1,2,3,4,5,6,7,8]; 
+  const TwovisibleCars = cars.filter(car => TwoselectedIds.includes(car.id));
   return (
     <div className="mt-8">
       <div className='w-[90%] max-w-[1320px] mx-auto my-0' >
@@ -50,9 +42,6 @@ const Home = () => {
               {/* Pick-up */}
               <Delivery
                 title="Pick-up"
-                location="Location"
-                date="Date"
-                time="Time"
               />
 
               {/* Swap Button */}
@@ -66,9 +55,6 @@ const Home = () => {
               {/* Drop-off */}
               <Delivery
                 title="Drop-off"
-                location="Location"
-                date="Date"
-                time="Time"
               />
             </div>
           </div>
@@ -80,72 +66,9 @@ const Home = () => {
             </div>
             <div className="flex overflow-x-auto no-scrollbar gap-5  md:justify-between">
 
-              <CarBox
-                title="Koenigsegg"
-                type="Sport"
-                price="$99.00"
-                image={car}
-                people="2 People"
-                gas="90L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[300px]"
-                flex="flex-row gap-4"
-                CarFlex=" flex-col"
-                BoxImage="w-[220px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="Nissan GT - R"
-                type="Sport"
-                price="$80.00"
-                discount="$100.00"
-                image={Nissan}
-                people="2 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[300px]"
-                flex="flex-row w-full"
-                CarFlex=" flex-col"
-                BoxImage="w-[220px] h-[64px] md:w-[204px] md:[64px]"
-              />
-              <CarBox
-                title="Rolls - Royce"
-                type="Sedan"
-                price="$96.00"
-                image={Royce}
-                people="4 People"
-                gas="70L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[300px]"
-                flex="flex-row w-full"
-                CarFlex=" flex-col"
-                BoxImage="w-[220px] h-[64px] md:w-[204px] md:[64px]"
-              />
-              <CarBox
-                title="Nissan GT - R"
-                type="Sport"
-                price="$80.00"
-                discount="$100.00"
-                image={Nissan}
-                people="2 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[300px]"
-                flex="flex-row w-full"
-                CarFlex=" flex-col"
-                BoxImage="w-[220px] h-[64px] md:w-[204px] md:[64px]"
-              />
+              {visibleCars.map(car => (
+                <CarBox key={car.id} {...car} />
+              ))}
 
             </div>
           </div>
@@ -157,137 +80,9 @@ const Home = () => {
 
             <div className="flex items-center justify-start   gap-8 flex-wrap mt-5">
 
-              <CarBox
-                title="All New Rush"
-                type="SUV"
-                price="$72.00"
-                discount="$80.00"
-                image={Rush}
-                people="6 People"
-                gas="70L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full "
-                CarFlex=" gap-[45px]  flex-row md:flex-col "
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="CR-V"
-                type="SUV"
-                price="$80.00"
-                image={Crv}
-                people="6 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex=" gap-[45px] flex-row md:flex-col "
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="All New Terios"
-                type="SUV"
-                price="$74.00"
-                image={Terios}
-                people="6 People"
-                gas="90L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex=" gap-[45px]  flex-row md:flex-col"
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="CR - V"
-                type="SUV"
-                price="$80.00"
-                image={CrvTwo}
-                people="6 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex="gap-[45px]  flex-row md:flex-col"
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-
-              <CarBox
-                title="MG ZX Exclusice"
-                type="SUV"
-                price="$80.00"
-                image={Exclusice}
-                discount="$80.00"
-                people="6 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex=" gap-[45px]  flex-row md:flex-col"
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="New MG ZS"
-                type="SUV"
-                price="$80.00"
-                image={NewMgZs}
-                people="6 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex=" gap-[45px]  flex-row md:flex-col"
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="MG ZX Excite"
-                type="Hatchback"
-                price="$74.00"
-                image={Excite}
-                people="6 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex=" gap-[45px] flex-row md:flex-col "
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
-              <CarBox
-                title="New MG ZS"
-                type="SUV"
-                price="$80.00"
-                image={TwoNewMgZs}
-                people="6 People"
-                gas="80L"
-                heart={<HeartOutlined />}
-                imageGas={Gas}
-                imagePeople={Profiluser}
-                imageManual={Manual}
-                mobileWidth="w-[340px]"
-                flex="flex-col  md:flex-row gap-4 md:w-full"
-                CarFlex=" gap-[45px] flex-row md:flex-col"
-                BoxImage="w-[160px] h-[64px] md:w-[264px] md:[108px]"
-              />
+              {TwovisibleCars.map(car => (
+                <CarBox key={car.id} {...car} />
+              ))}
             </div>
           </div>
         </div>
