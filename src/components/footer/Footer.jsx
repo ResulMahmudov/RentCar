@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className='bg-white'>
       <div className='w-full max-w-[1400px] mx-auto my-0'>
-        <div className="flex flex-col gap-[72px] mb-4">
+        <div className="flex flex-col gap-[72px]">
 
           <div className="flex-col md:flex justify-between items-start mt-20 ml-5">
             <div className='flex flex-col gap-4 mb-8'>
