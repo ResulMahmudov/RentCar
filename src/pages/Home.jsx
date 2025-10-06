@@ -15,7 +15,7 @@ const Home = () => {
   const TwovisibleCars = cars.filter(car => TwoselectedIds.includes(car.id));
   return (
     <div className="mt-8">
-      <div className='w-[90%] max-w-[1320px] mx-auto my-0' >
+      <div className='w-[90%] max-w-[1340px] mx-auto my-0' >
         <div>
           <div className="flex flex-col">
             <div className="flex overflow-x-auto no-scrollbar md:justify-between md:overflow-visible gap-5">
