@@ -4,7 +4,7 @@ import FooterList from './FooterList'
 const Footer = () => {
   return (
     <footer className='bg-white'>
-      <div className='w-full max-w-[1300px] mx-auto my-0'>
+      <div className='w-full md:px-14'>
         <div className="flex flex-col gap-[72px]">
 
           <div className=" flex flex-col justify-between items-start mt-20 ml-5  md:flex-row md:ml-0">

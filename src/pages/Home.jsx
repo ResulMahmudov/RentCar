@@ -42,6 +42,7 @@ const Home = () => {
               {/* Pick-up */}
               <Delivery
                 title="Pick-up"
+                width=" w-[327px] md:w-[582px]"
               />
 
               {/* Swap Button */}
@@ -55,6 +56,7 @@ const Home = () => {
               {/* Drop-off */}
               <Delivery
                 title="Drop-off"
+                width=" w-[327px] md:w-[582px]"
               />
             </div>
           </div>
@@ -92,7 +94,7 @@ const Home = () => {
           </div>
 
           <div>
-            
+
           </div>
         </div>
       </div>
