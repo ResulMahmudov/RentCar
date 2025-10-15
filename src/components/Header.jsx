@@ -9,7 +9,7 @@ const Header = () => {
 
     <header className="bg-white shadow-md">
 
-      <div className='w-full max-w-[1400px]  mx-auto my-0'>
+      <div className='w-full max-w-[1400px]  h-[124px] mx-auto my-0'>
 
 
         <div className="flex flex-col-reverse md:flex-row md:justify-between items-center p-10 md:h-[124px]  gap-8 md:gap-0">

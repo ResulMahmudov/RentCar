@@ -12,7 +12,7 @@ const Category = () => {
   return (
     <div className='flex'>
 
-      <div className='bg-white  h-[1651px] w-[360px]  flex-col gap-14 px-9 hidden  md:flex'>
+      <div className='bg-white  h-[1652px] w-[360px]  flex-col gap-14 px-9 hidden  md:flex'>
 
         <div className='flex flex-col gap-7'>
           <h3 className='text-[#90A3BF] text-xs'>Type</h3>
