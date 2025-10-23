@@ -91,9 +91,8 @@ const Category = () => {
       </div>
 
 
-      <div className='w-[90%]  max-w-[1340px]  mx-auto my-0' >
-
-        <div className="mt-8 flex  gap-10 flex-col md:flex-row justify-center items-center  md:gap-11 relative">
+      <div className='w-[90%]  max-w-[1340px] mx-auto md:ml-14 mt-14  '  >
+        <div className="flex  gap-10 flex-col items-center md:items-start md:flex-row  md:gap-11 relative">
           {/* Pick-up */}
           <Delivery
             width="  w-[327px] md:w-[486px] "
@@ -103,7 +102,7 @@ const Category = () => {
           {/* Swap Button */}
           <button
             className="w-[60px] h-[60px] flex items-center justify-center bg-[#3563E9] rounded-xl
-                absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2"
+                absolute left-[50%] md:left-[38%] top-[50%] -translate-x-1/2 -translate-y-1/2"
           >
             <img src={Swap} alt="swap" />
           </button>
@@ -114,9 +113,9 @@ const Category = () => {
             width="  w-[327px] md:w-[486px]"
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-8 mt-5 mb-5">
+        <div className="flex flex-col items-center justify-center gap-8  ">
 
-          <div className="flex items-center justify-center gap-12 flex-wrap mt-5">
+          <div className="flex  gap-12 flex-wrap mt-5">
 
             {TwovisibleCars.map(car => (
               <CarBox key={car.id} {...car} />
@@ -124,8 +123,8 @@ const Category = () => {
 
           </div>
 
-          <div className="w-[156px] h-[44px] bg-[#3563E9] flex items-center justify-center rounded">
-            <button className="text-white">Show more car</button>
+          <div className="w-[156px] h-[44px] bg-[#3563E9] flex items-center justify-center mb-3 rounded">
+            <button className="text-white text-center">Show more car</button>
           </div>
         </div>
       </div>

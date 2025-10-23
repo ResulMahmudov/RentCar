@@ -66,7 +66,7 @@ const Home = () => {
               <h1 className="cursor-pointer">Popular Car</h1>
               <button>View All</button>
             </div>
-            <div className="flex overflow-x-auto no-scrollbar gap-5  md:justify-between">
+            <div className="flex overflow-x-auto md:overflow-x-visible no-scrollbar gap-5  md:justify-between">
 
               {visibleCars.map(car => (
                 <CarBox key={car.id} {...car} />
@@ -93,9 +93,6 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
-
-          </div>
         </div>
       </div>
     </div>

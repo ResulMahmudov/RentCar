@@ -7,9 +7,9 @@ const Header = () => {
   const icons = [<HeartFilled />, <BellFilled />, <SettingFilled />];
   return (
 
-    <header className="bg-white shadow-md">
+    <header className="bg-white ">
 
-      <div className='w-full max-w-[1400px]  h-[124px] mx-auto my-0'>
+      <div className='w-full max-w-[1350px] md:h-[120px] h-[250px] mx-auto my-0'>
 
 
         <div className="flex flex-col-reverse md:flex-row md:justify-between items-center p-10 md:h-[124px]  gap-8 md:gap-0">
